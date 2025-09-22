@@ -68,6 +68,8 @@ nav a::after{
     position: absolute;
     width: 12px;
     height: 12px;
+    top: 12px;
+    right: 12px;
     border: 3px solid #fff;
     border-width: 3px 3px 0px 0;
     opacity: 0;
@@ -83,10 +85,11 @@ nav a:hover::after{
 
 /*PARAGRAFO*/
 
-.card{
-    height:auto;
-    width:100%;
+.card-corpo{
     display:flex;
+    height: 100%;
+    border-radius: 12px;
+    text-align: center;
     justify-content: center;
     align-items: center;
     margin: 20px;
