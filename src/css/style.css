@@ -1,31 +1,35 @@
 /*corpo da página*/
 
-
+*{
+    background-color: #1a1919;
+    margin: 0;
+    padding: 0;
+}
 
 
 
 /* barra de header/navegação*/
 
 
-.container{
-    width: 100%;
+.conteiner{
+    width: auto;
     height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: sans-serif;
-    background: #0e0e0e;
+
 }
 
-ul{
+nav{
     display: flex;
 }
 
-li{
+nav{
     list-style: none;
 }
 
-ul li a{
+nav a{
     color:#fff;
     font-size: 2rem;
     text-decoration: none;
@@ -36,7 +40,7 @@ ul li a{
     text-transform: uppercase;
 }
 
-.list-item::before{
+nav a::before{
     content: "";
     position: absolute;
     bottom: 12px;
@@ -49,18 +53,16 @@ ul li a{
     transition: all 0.6s;
 }
 
-.list-item:hover::before{
+nav a:hover::before{
     opacity: 1;
     bottom:-8px;
     left: -8px;
 }
 
 
-.list-item::after{
+nav a::after{
     content: "";
     position: absolute;
-    top: 0;
-    right: 0;
     width: 12px;
     height: 12px;
     border: 3px solid white;
@@ -69,7 +71,7 @@ ul li a{
     transition: all 0.6s;
 }
 
-.list-item:hover::after{
+nav a:hover::after{
     opacity: 1;
     top:-8px;
     right: -8px;
