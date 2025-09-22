@@ -1,7 +1,7 @@
 /*corpo da página*/
 
 *{
-    background-color: #1a1919;
+    background-color: #121212;
     margin: 0;
     padding: 0;
 }
@@ -47,7 +47,7 @@ nav a::before{
     left: 12px;
     width: 12px;
     height: 12px;
-    border: 3px solid white;
+    border: 3px solid #7F00FF;
     border-width: 0px 0px 3px 3px;
     opacity: 0;
     transition: all 0.6s;
@@ -65,7 +65,7 @@ nav a::after{
     position: absolute;
     width: 12px;
     height: 12px;
-    border: 3px solid white;
+    border: 3px solid #7F00FF;
     border-width: 3px 3px 0px 0;
     opacity: 0;
     transition: all 0.6s;
@@ -76,3 +76,26 @@ nav a:hover::after{
     top:-8px;
     right: -8px;
 }
+
+
+/*botões*/
+
+.ouca button{
+    width: auto;
+    height: 35px;
+    justify-content: center;
+    align-items: center;
+    background-color: #3b3b3b;
+    color:#fff;
+    text-decoration: none;
+    padding: 0.4rem 1rem;
+    margin: 0 10px;
+    position: relative;
+    transition: all 0.5;
+}
+
+.ouca{
+    display: flex;
+    justify-content: center;
+}
+
