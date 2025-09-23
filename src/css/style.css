@@ -88,7 +88,7 @@ nav a:hover::after{
   align-items:flex-start;
   gap:40px;
   width:100%;
-   background:linear-gradient(45deg, #7F00FF,rgb(63, 12, 114), #000);
+   background:linear-gradient(45deg, #000,rgb(63, 12, 114), #7F00FF);
    margin-top: 50px;
 }
 
