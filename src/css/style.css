@@ -1,7 +1,7 @@
 /*corpo da página*/
 
 body{
-    background-color: #212021;
+    background-color: #1a1a1a;
     margin: 0;
     padding: 0;
 }
@@ -100,13 +100,17 @@ nav a:hover::after{
 
 .card-pai{
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
 .card-corpo, .card-corpo2{
     display: inline-block;
     width: 20%;
     vertical-align: top;
-    border-radius: 12px;
+    border-radius: 25px;
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -119,8 +123,13 @@ nav a:hover::after{
     background-color:rgb(63, 12, 114);
     
 }
-.card-text, .card-text2, .card-title, .card-title2{
+.card-text, .card-text2{
     color:#fff;
+    height: 200px;
+}
+.card-title, .card-title2{
+    color:#fff;
+    height: 50px;
 }
 .card-body a{
     background-color: #b163ff;
@@ -171,16 +180,21 @@ nav a:hover::after{
 
 /*DEPOIMENTOS*/
 
+.depoimento{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+}
+
 .card-dp1{
     background-color:rgb(63, 12, 114) ;
-    
     max-width: 500px;
     max-height: 630px;
     border-radius: 12px;
     text-align: center;
     align-items: center;
     justify-content: center;
-    margin: auto;
     padding: 30px;
 }
 
@@ -193,7 +207,60 @@ nav a:hover::after{
     text-align: center;
     align-items: center;
     justify-content: center;
-    margin: auto;
     padding: 30px;
 }
 
+
+
+/*PÁGINA SOBRE*/
+#quemsomos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 2rem;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+}
+
+#quemsomos img{
+    min-width: 90px;
+    max-width: 350px;
+}
+
+.quemsomo h2{
+  color: #ffffff;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.quemsomo p {
+  font-size: 20px;
+  color: #ffffff;
+  max-width: 500px;
+}
+
+.beneficios{
+    height: 300px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.list-group{
+
+    width: 900px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(63, 12, 114);
+}
+
+.list-group-item.active {
+    z-index: 2;
+    color: var(--bs-list-group-active-color);
+    background-color: #7F00FF;
+    border-color: #d4a8ff;
+}
