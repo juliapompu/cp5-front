@@ -1,7 +1,7 @@
 /*corpo da página*/
 
 body{
-    background-color: #121212;
+    background-color: #212021;
     margin: 0;
     padding: 0;
 }
@@ -9,7 +9,6 @@ body{
 
 
 /* barra de header/navegação*/
-
 
 .conteiner{
     width: auto;
@@ -20,8 +19,6 @@ body{
     font-family: sans-serif;
     border-radius: 3px ;
     background:linear-gradient(45deg, #7F00FF,rgb(63, 12, 114), #000);
-
-
 }
 
 nav{
@@ -82,29 +79,59 @@ nav a:hover::after{
     right: -8px;
 }
 
+/*FOOTER*/
+
+.footer{
+  padding:10px 0;
+  text-align:center;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  gap:40px;
+  width:100%;
+   background:linear-gradient(45deg, #7F00FF,rgb(63, 12, 114), #000);
+   margin-top: 50px;
+}
+
+.footer-section{
+    color:#fff;
+}
 
 /*PARAGRAFO*/
 
-.card-corpo{
-
+.card-corpo, .card-corpo2{
     height: 100%;
     border-radius: 12px;
+    float: left; 
+    width: 20%;  
     text-align: center;
     justify-content: center;
     align-items: center;
-    margin: 20px;
+    margin-left: 160px;
     padding: 30px;
-   
+
 }
-.card{
+
+.card, .card2{
     background-color:rgb(63, 12, 114);
+    
 }
-.card-text{
+.card-text, .card-text2, .card-title, .card-title2{
     color:#fff;
 }
 
 
+/*MUSICA*/
 
-/*FOOTER*/
-
-
+.musica{
+    font-size: 10px; 
+    color: #cccccc;
+    display: block;
+    margin-top: 200px;
+    word-break: normal;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; 
+    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
+    font-weight: 100;
+}
