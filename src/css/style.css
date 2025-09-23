@@ -80,7 +80,6 @@ nav a:hover::after{
 }
 
 /*FOOTER*/
-
 .footer{
   padding:10px 0;
   text-align:center;
@@ -135,5 +134,4 @@ nav a:hover::after{
     font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
     font-weight: 100;
 }
-
 
