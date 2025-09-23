@@ -98,15 +98,19 @@ nav a:hover::after{
 
 /*PARAGRAFO*/
 
-.card-corpo, .card-corpo2{
-    height: 100%;
-    border-radius: 12px;
-    float: left; 
-    width: 20%;  
+.card-pai{
     text-align: center;
-    justify-content: center;
+}
+
+.card-corpo, .card-corpo2{
+    display: inline-block;
+    width: 20%;
+    vertical-align: top;
+    border-radius: 12px;
+    text-align: center;
     align-items: center;
-    margin-left: 160px;
+    justify-content: center;
+    margin: 20px;
     padding: 30px;
 
 }
@@ -118,20 +122,78 @@ nav a:hover::after{
 .card-text, .card-text2, .card-title, .card-title2{
     color:#fff;
 }
+.card-body a{
+    background-color: #b163ff;
+    border-color: #d4a8ff;
+    border-radius: 10px;
+}
+
 
 
 /*MUSICA*/
 
-.musica{
-    font-size: 10px; 
-    color: #cccccc;
-    display: block;
-    margin-top: 200px;
-    word-break: normal;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis; 
-    font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;
-    font-weight: 100;
+ .musica {
+  text-align: center;
+  margin: 40px auto;
+  width: 100%;
+  max-width: 900px;
+  color: #fff;
+}
+
+.musica h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.musica-lista {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
+}
+
+.musica-item {
+  flex: 0 0 auto;
+  width: 300px;
+  scroll-snap-align: start;
+  background: #222;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.musica-item iframe {
+  width: 100%;
+  border-radius: 8px;
+}
+
+
+/*DEPOIMENTOS*/
+
+.card-dp1{
+    background-color:rgb(63, 12, 114) ;
+    
+    max-width: 500px;
+    max-height: 630px;
+    border-radius: 12px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 30px;
+}
+
+.card-dp2{
+    background-color:rgb(63, 12, 114) ;
+   
+    max-width: 400px;
+    max-height: 600px;
+    border-radius: 12px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 30px;
 }
 
