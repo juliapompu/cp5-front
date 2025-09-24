@@ -14,15 +14,18 @@ body{
     width: auto;
     height: 100px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: left;
     font-family: sans-serif;
     border-radius: 3px ;
     background:linear-gradient(45deg, #7F00FF,rgb(63, 12, 114), #000);
+    gap: 60px;
 }
 
 nav{
     display: flex;
+    margin: 20px;
+    padding-left: 300px;
 }
 
 nav{
@@ -78,6 +81,26 @@ nav a:hover::after{
     top:-8px;
     right: -8px;
 }
+
+.textoheader {
+  display: flex;
+  align-items: center; 
+  gap: 20px; 
+}
+
+.textoheader img {
+  margin-top: 5px;    
+  width: 120px;
+  height: 120px;
+}
+
+.textoheader h4 {
+    text-align: center;
+    font-size:larger;
+    color: #fff;
+}
+
+
 
 /*FOOTER*/
 .footer{
@@ -213,6 +236,7 @@ nav a:hover::after{
 
 
 /*PÁGINA SOBRE*/
+
 #quemsomos {
   display: flex;
   justify-content: center;
@@ -263,4 +287,13 @@ nav a:hover::after{
     color: var(--bs-list-group-active-color);
     background-color: #7F00FF;
     border-color: #d4a8ff;
+}
+
+.descricao{
+    margin-top: 50px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
 }
