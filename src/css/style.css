@@ -141,6 +141,7 @@ nav a:hover::after{
 
 .footer-section{
     color:#fff;
+    display: block;
 }
 
 /*PARAGRAFO*/
@@ -303,21 +304,43 @@ nav a:hover::after{
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: rgb(63, 12, 114);
+   --bs-list-group-action-hover-bg:rgb(168, 168, 168);
+    --bs-list-group-border-color: rgb(136, 136, 136);
+}
+ 
+#cabeca{
+    background-color: rgb(63, 12, 114) ;
+}
+
+.list-group-item {
+    background-color: rgb(172, 172, 172);
 }
 
 .list-group-item.active {
     z-index: 2;
     color: var(--bs-list-group-active-color);
     background-color: #7F00FF;
-    border-color: #d4a8ff;
+    border-color: rgb(63, 12, 114);
 }
 
-.descricao{
-    margin-top: 50px;
+.funcionalidade{
     display: flex;
-    text-align: center;
+    margin-top: 70px;
+    gap: 15px;
     align-items: center;
     justify-content: center;
-
+    text-align: center;
 }
+
+#butao1, #butao2, #butao3, #butao4, #butao5, #botao6{
+    background-color: #7F00FF;
+    border-color:rgb(63, 12, 114) ;
+}
+
+.card-descricao{
+    font-size: 15px;
+  color: #ffffff;
+  max-width: 500px;
+}
+
+ 
