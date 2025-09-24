@@ -1,7 +1,7 @@
 /*corpo da página*/
 
 body{
-    background-color: #121212;
+    background-color: #1a1a1a;
     margin: 0;
     padding: 0;
 }
@@ -10,22 +10,22 @@ body{
 
 /* barra de header/navegação*/
 
-
 .conteiner{
     width: auto;
     height: 100px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: left;
     font-family: sans-serif;
     border-radius: 3px ;
     background:linear-gradient(45deg, #7F00FF,rgb(63, 12, 114), #000);
-
-
+    gap: 60px;
 }
 
 nav{
     display: flex;
+    margin: 20px;
+    padding-left: 300px;
 }
 
 nav{
@@ -82,19 +82,22 @@ nav a:hover::after{
     right: -8px;
 }
 
+.textoheader {
+  display: flex;
+  align-items: center; 
+  gap: 20px; 
+}
 
-/*PARAGRAFO*/
+.textoheader img {
+  margin-top: 5px;    
+  width: 120px;
+  height: 120px;
+}
 
-.card-corpo{
-    display:flex;
-    height: 100%;
-    border-radius: 12px;
+.textoheader h4 {
     text-align: center;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
-    padding: 30px;
-   
+    font-size:larger;
+    color: #fff;
 }
 
 /*contatos*/
@@ -123,3 +126,198 @@ nav a:hover::after{
     margin: 5 auto;
 }
 
+/*FOOTER*/
+.footer{
+  padding:10px 0;
+  text-align:center;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  gap:40px;
+  width:100%;
+   background:linear-gradient(45deg, #000,rgb(63, 12, 114), #7F00FF);
+   margin-top: 50px;
+}
+
+.footer-section{
+    color:#fff;
+}
+
+/*PARAGRAFO*/
+
+.card-pai{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.card-corpo, .card-corpo2{
+    display: inline-block;
+    width: 20%;
+    vertical-align: top;
+    border-radius: 25px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    padding: 30px;
+
+}
+
+.card, .card2{
+    background-color:rgb(63, 12, 114);
+    
+}
+.card-text, .card-text2{
+    color:#fff;
+    height: 200px;
+}
+.card-title, .card-title2{
+    color:#fff;
+    height: 50px;
+}
+.card-body a{
+    background-color: #b163ff;
+    border-color: #d4a8ff;
+    border-radius: 10px;
+}
+
+
+
+/*MUSICA*/
+
+ .musica {
+  text-align: center;
+  margin: 40px auto;
+  width: 100%;
+  max-width: 900px;
+  color: #fff;
+}
+
+.musica h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.musica-lista {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
+}
+
+.musica-item {
+  flex: 0 0 auto;
+  width: 300px;
+  scroll-snap-align: start;
+  background: #222;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.musica-item iframe {
+  width: 100%;
+  border-radius: 8px;
+}
+
+
+/*DEPOIMENTOS*/
+
+.depoimento{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+}
+
+.card-dp1{
+    background-color:rgb(63, 12, 114) ;
+    max-width: 500px;
+    max-height: 630px;
+    border-radius: 12px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.card-dp2{
+    background-color:rgb(63, 12, 114) ;
+   
+    max-width: 400px;
+    max-height: 600px;
+    border-radius: 12px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+
+
+/*PÁGINA SOBRE*/
+
+#quemsomos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 2rem;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+}
+
+#quemsomos img{
+    min-width: 90px;
+    max-width: 350px;
+}
+
+.quemsomo h2{
+  color: #ffffff;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.quemsomo p {
+  font-size: 20px;
+  color: #ffffff;
+  max-width: 500px;
+}
+
+.beneficios{
+    height: 300px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.list-group{
+
+    width: 900px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(63, 12, 114);
+}
+
+.list-group-item.active {
+    z-index: 2;
+    color: var(--bs-list-group-active-color);
+    background-color: #7F00FF;
+    border-color: #d4a8ff;
+}
+
+.descricao{
+    margin-top: 50px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+}
