@@ -350,15 +350,7 @@ nav a:hover::after{
 
 /* DEPOIMENTOS */
 
-bodyj {
-      font-family: Arial, sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      background-color: #f4f4f4;
-    }
+
 
     .cardj, .cardje {
       background-color: #ffffff;
@@ -375,8 +367,8 @@ bodyj {
     }
 
     .card-headerj img {
-       width: 70px;
-       height: 70px;
+       width: 90px;
+       height: 60px;
        border-radius: 50px;
        margin: 5px;
     }
