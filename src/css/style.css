@@ -101,7 +101,7 @@ nav a:hover::after{
 }
 
 /*contatos*/
-.card-contatos{
+#formDepoimento{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -324,5 +324,50 @@ nav a:hover::after{
     text-align: center;
     align-items: center;
     justify-content: center;
-
+    text-align: center;
 }
+
+#butao1, #butao2, #butao3, #butao4, #butao5, #botao6{
+    background-color: #7F00FF;
+    border-color:rgb(63, 12, 114) ;
+}
+
+.card-descricao{
+    font-size: 15px;
+  color: #ffffff;
+  max-width: 500px;
+}
+
+/* DEPOIMENTOS */
+
+
+
+    .cardj, .cardje {
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      width: 300px;
+      margin: 10px;
+    }
+
+    .card-contentj {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .card-headerj img {
+       width: 90px;
+       height: 60px;
+       border-radius: 50px;
+       margin: 5px;
+    }
+    
+    .depoimentos, .depoimentos2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 10px;
+    }
