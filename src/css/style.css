@@ -230,37 +230,68 @@ nav a:hover::after{
 }
 
 
-/*DEPOIMENTOS*/
+/*DEPOIMENTOS-PÁGINA INICIAL*/
 
-.depoimento{
+
+/* Título principal dos depoimentos */
+.depoimentos-index h2 {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Container de cada depoimento */
+.card-depoimento {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    max-width: 350px;
+    flex: 1;
+}
+
+/* Nome do usuário */
+.card-depoimento h5 {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Texto do comentário */
+.card-depoimento p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Lista de depoimentos em grid responsivo */
+#listaDepoimentosIndex {
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
-    gap:20px;
+    gap: 20px;
 }
 
-.card-dp1{
-    background-color:rgb(63, 12, 114) ;
-    max-width: 500px;
-    max-height: 630px;
-    border-radius: 12px;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
+/* Botão "Ver todos" */
+.depoimentos-index .btn {
+    background-color: rgb(63, 12, 114);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
 }
 
-.card-dp2{
-    background-color:rgb(63, 12, 114) ;
-   
-    max-width: 400px;
-    max-height: 600px;
-    border-radius: 12px;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
+.depoimentos-index .btn:hover {
+    background-color:#7F00FF;
 }
+
+
+
+
 
 
 
@@ -340,8 +371,6 @@ nav a:hover::after{
 
 /* DEPOIMENTOS */
 
-
-
     .cardj, .cardje {
       background-color: #ffffff;
       border-radius: 8px;
@@ -371,3 +400,29 @@ nav a:hover::after{
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         margin: 10px;
     }
+
+    .cardje {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 15px 0;
+  background: #f9f9f9;
+}
+
+.card-footerj {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-excluir {
+  margin-left: 10px;
+}
+
+.depoimentos-titulo{
+    color:#fff;
+    display:flex;
+    text-align:center;
+    justify-content:center;
+    align-items:center;
+}

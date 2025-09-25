@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"/>
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+    crossorigin="anonymous"
+  />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/style.css"/>
   <link rel="icon" href="../assets/logo-melodia.png"/>
@@ -14,7 +18,7 @@
     <nav>
       <a href="/index.html">Home</a>
       <a href="../pages/sobre.html">Sobre</a>
-      <a href="../pages/depoimentos.html">depoimentos</a>
+      <a href="../pages/depoimentos.html">Depoimentos</a>
       <a href="../pages/contato.html">Contato</a>
     </nav>
     <div class="textoheader">
@@ -23,52 +27,45 @@
     </div>
   </header>
 
-<div class="card-contatos">
-  <form class="row g-3">
-    <div class="col-md-6">
-      <label for="inputEmail4" class="form-label">Email</label>
-      <input type="email" class="form-control" id="inputEmail4" placeholder="usuaria@gmail.com.br" required>
-    </div>
-     <div class="col-md-6">
-      <label for="inputNome" class="form-label">Nome</label>
-      <input type="text" class="form-control" id="inputNome" placeholder="Julia Pompeu" required>
-    </div>
-    <div class="col-md-6">
-      <label for="inputPassword4" class="form-label">Senha</label>
-      <input type="password" class="form-control" id="inputPassword4" placeholder="1234" required>
-    </div>
-    <div class="col-12">
-      <label for="inputAddress" class="form-label">Endereço</label>
-      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" required>
-    </div>
-  
-    <div class="col-md-6">
-      <label for="inputCity" class="form-label">Comentario</label>
-      <input type="text" class="form-control" id="inputCity"  required>
-      <br>
-    </div>
-    
-    <div class="col-md-2">
-      <label for="inputZip" class="form-label">Zip</label>
-      <input type="text" class="form-control" id="inputZip" placeholder="01245-256">
-      <br>
-    </div>
-    <div class="col-12">
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="gridCheck">
-        <label class="form-check-label" for="gridCheck" required>
-          Aceito os termos de Compromisso.
-        </label>
+  <div class="card-contatos">
+    <form id="formDepoimento" class="row g-3">
+      <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">Email</label>
+        <input type="email" class="form-control" id="inputEmail4" placeholder="usuaria@gmail.com.br" required>
       </div>
-    </div>
-    <div class="col-12">
-      <button type="submit" class="btn btn-primary">Sign in</button>
-    </div>
-  </form>
-</div>
+      <div class="col-md-6">
+        <label for="inputNome" class="form-label">Nome</label>
+        <input type="text" class="form-control" id="inputNome" placeholder="Julia Pompeu" required>
+      </div>
+      <div class="col-md-6">
+        <label for="inputPassword4" class="form-label">Senha</label>
+        <input type="password" class="form-control" id="inputPassword4" placeholder="1234" required>
+      </div>
+      <div class="col-12">
+        <label for="inputAddress" class="form-label">Endereço</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" required>
+      </div>
+      <div class="col-md-6">
+        <label for="inputComentario" class="form-label">Comentário</label>
+        <input type="text" class="form-control" id="inputComentario" required>
+      </div>
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck" required>
+          <label class="form-check-label" for="gridCheck">
+            Aceito os termos de compromisso.
+          </label>
+        </div>
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Enviar Depoimento</button>
+      </div>
+    </form>
+  </div>
 
-<br><br><br>
+  <br><br><br>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/script.js"></script>
 </body>
 </html>
