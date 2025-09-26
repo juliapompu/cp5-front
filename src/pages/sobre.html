@@ -3,214 +3,274 @@
 <head>
   <meta charset="UTF-8">
   <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"/>
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
   <link rel="stylesheet" href="../css/style.css"/>
   <link rel="icon" href="../assets/logo-melodia.png"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <title>Melodia</title>
 </head>
-<body>
-  <header class="conteiner">
-    <nav>
+<body class="bg-[#1a1a1a]">
+
+  <!-- HEADER -->
+  <header class="conteiner relative">
+    <div class="lg:hidden w-full px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <img src="../assets/image_2025-09-23_003617409.png" alt="Logo Melodia" class="w-9 h-9 object-contain" />
+        <h4 class="text-white text-xs leading-snug max-[420px]:text-[11px] max-[360px]:text-[10px]">
+          Melodia: Sua Música, sua forma!
+        </h4>
+      </div>
+      <button id="menuToggle" aria-label="Abrir menu"
+              class="p-2 rounded-lg border border-white/25 active:scale-95 transition">
+        <svg id="iconOpen" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="iconClose" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white hidden" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- MENU DESKTOP -->
+    <nav class="hidden lg:flex">
       <a href="../../index.html">Home</a>
       <a href="../pages/sobre.html">Sobre</a>
       <a href="../pages/depoimentos.html">depoimentos</a>
       <a href="../pages/contato.html">Contato</a>
     </nav>
-    <div class="textoheader">
+    <div class="textoheader hidden lg:flex">
       <img src="../assets/image_2025-09-23_003617409.png">
       <h4>Melodia: Sua Música, sua forma!</h4>
     </div>
+
+    <!-- MENU MOBILE -->
+    <div id="menuBackdrop"
+         class="lg:hidden fixed inset-0 bg-black/50 opacity-0 pointer-events-none transition-opacity duration-300 z-[10000]"></div>
+
+    <aside id="mobileMenu"
+           class="lg:hidden fixed inset-x-0 top-0 z-[10001] opacity-0 pointer-events-none transition-opacity duration-300">
+      <div class="pt-[72px] max-[420px]:pt-[68px] max-[360px]:pt-[64px] px-4">
+        <div id="mobilePanel"
+             class="mx-auto w-full max-w-screen-sm rounded-xl bg-black/85 backdrop-blur-md
+                    border border-white/10 overflow-hidden transform -translate-y-6
+                    transition-transform duration-300">
+          <nav class="flex flex-col items-center text-center py-2 px-2 max-h-[70vh] overflow-y-auto gap-1">
+            <a href="../../index.html"
+               class="w-full text-white max-[360px]:text-[12px] max-[420px]:text-xs text-sm md:text-base tracking-wide py-3 max-[420px]:py-2.5 rounded-lg hover:bg-white/10">HOME</a>
+            <a href="../pages/sobre.html"
+               class="w-full text-white max-[360px]:text-[12px] max-[420px]:text-xs text-sm md:text-base tracking-wide py-3 max-[420px]:py-2.5 rounded-lg hover:bg-white/10">SOBRE</a>
+            <a href="../pages/depoimentos.html"
+               class="w-full text-white max-[360px]:text-[12px] max-[420px]:text-xs text-sm md:text-base tracking-wide py-3 max-[420px]:py-2.5 rounded-lg hover:bg-white/10">DEPOIMENTOS</a>
+            <a href="../pages/contato.html"
+               class="w-full text-white max-[360px]:text-[12px] max-[420px]:text-xs text-sm md:text-base tracking-wide py-3 max-[420px]:py-2.5 rounded-lg hover:bg-white/10">CONTATO</a>
+          </nav>
+        </div>
+      </div>
+    </aside>
   </header>
 
-  <br><br><br>
+  <br class="max-[1023px]:hidden"><br class="max-[1023px]:hidden"><br class="max-[1023px]:hidden">
 
-
-<!-- QUEM SOMOS -->
-  <div id="quemsomos">
-    <img src="../assets/melodiaapp.jpg" alt="Imagem do nosso aplicativo de música"  class="aumentada"   style="width: 450px; border-radius:40px;">
-    <div class="quemsomo">
-        <h2>Quem Somos?</h2>
-        <p>
-          Melodia é o app ideal para quem busca uma experiência musical personalizada. 
-          Com interface intuitiva, você cria playlists, 
-          mistura sons e descobre músicas novas do seu jeito. 
-          Curta seu estilo, no seu ritmo — onde e quando quiser.
-        </p>
+  <!-- QUEM SOMOS -->
+  <div id="quemsomos"
+       class="max-[1023px]:px-4 max-[1023px]:py-6 max-[1023px]:flex max-[1023px]:flex-col max-[1023px]:items-center max-[1023px]:gap-5">
+    <img src="../assets/melodiaapp.jpg" alt="Imagem do nosso aplicativo de música"
+         class="aumentada"
+         style="max-width: 450px; width: 100%; border-radius:40px;">
+    <div class="quemsomo max-[1023px]:text-center">
+      <h2 class="max-[1023px]:text-xl">Quem Somos?</h2>
+      <p class="max-[1023px]:text-[15px] max-[360px]:text-[14px]">
+        Melodia é o app ideal para quem busca uma experiência musical personalizada. 
+        Com interface intuitiva, você cria playlists, 
+        mistura sons e descobre músicas novas do seu jeito. 
+        Curta seu estilo, no seu ritmo — onde e quando quiser.
+      </p>
     </div>
   </div>
 
-
-  <br><br><br><br><br><br><br>
+  <br class="max-[1023px]:hidden"><br class="max-[1023px]:hidden"><br class="max-[1023px]:hidden"><br class="max-[1023px]:hidden"><br class="max-[1023px]:hidden"><br class="max-[1023px]:hidden"><br class="max-[1023px]:hidden">
 
   <!-- BENEFICIOS -->
-  <div class="beneficios">
-    <div class="list-group">
-      <a  class="list-group-item list-group-item-action active" id="cabeca">
+  <div class="beneficios max-[1023px]:min-h-0 max-[1023px]:py-4">
+    <div class="list-group max-[1023px]:w-[92%] max-[1023px]:mx-auto">
+      <a class="list-group-item list-group-item-action active" id="cabeca">
         <div class="grandetitulo1">
-          <h5 class="titulo1">Beneficios</h5>
+          <h5 class="titulo1 max-[1023px]:text-lg">Beneficios</h5>
         </div>
       </a>
       <a class="list-group-item list-group-item-action">
         <div class="grandetitulo">
-          <h5 class="titulo"> <i class="fa-solid fa-headphones"></i>  1. Qualidade de Som Superior</h5>
+          <h5 class="titulo max-[1023px]:text-base">
+            <i class="fa-solid fa-headphones"></i> 1. Qualidade de Som Superior
+          </h5>
         </div>
-        <p class="mb-1">Experiência sonora imersiva e de alta fidelidade.</p>
+        <p class="mb-1 max-[1023px]:text-[15px]">Experiência sonora imersiva e de alta fidelidade.</p>
         <small class="text-body-secondary">Áudio nítido e envolvente.</small>
       </a>
       <a class="list-group-item list-group-item-action">
         <div class="grandetitulo">
-          <h5 class="titulo"><i class="fa-solid fa-music"></i> 2. Playlists Personalizadas</h5>
+          <h5 class="titulo max-[1023px]:text-base">
+            <i class="fa-solid fa-music"></i> 2. Playlists Personalizadas
+          </h5>
         </div>
-        <p class="mb-1">Crie trilhas sonoras únicas.</p>
+        <p class="mb-1 max-[1023px]:text-[15px]">Crie trilhas sonoras únicas.</p>
         <small class="text-body-secondary">Para cada momento do seu dia</small>
       </a>
       <a class="list-group-item list-group-item-action">
         <div class="grandetitulo">
-          <h5 class="titulo"><i class="fa-solid fa-volume-high"></i> 3. Descoberta de Novos Artistas</h5>
+          <h5 class="titulo max-[1023px]:text-base">
+            <i class="fa-solid fa-volume-high"></i> 3. Descoberta de Novos Artistas
+          </h5>
         </div>
-        <p class="mb-1">Explore talentos emergentes e sons inovadores.</p>
+        <p class="mb-1 max-[1023px]:text-[15px]">Explore talentos emergentes e sons inovadores.</p>
         <small class="text-body-secondary">Novos sons, novas vozes.</small>
       </a>
       <a class="list-group-item list-group-item-action">
         <div class="grandetitulo">
-          <h5 class="titulo"> <i class="fa-solid fa-mobile-screen-button"></i> 4. Interface Intuitiva</h5>
+          <h5 class="titulo max-[1023px]:text-base">
+            <i class="fa-solid fa-mobile-screen-button"></i> 4. Interface Intuitiva
+          </h5>
         </div>
-        <p class="mb-1">Navegação fácil e agradável para todos os usuários.</p>
+        <p class="mb-1 max-[1023px]:text-[15px]">Navegação fácil e agradável para todos os usuários.</p>
         <small class="text-body-secondary">Simples de usar, fácil de amar!</small>
       </a>
-   </div>
+    </div>
   </div>
 
-<br><br><br><br><br><br><br>
+  <br class="max-[1023px]:hidden"><br class="max-[1023px]:hidden"><br class="max-[1023px]:hidden"><br class="max-[1023px]:hidden"><br class="max-[1023px]:hidden"><br class="max-[1023px]:hidden"><br class="max-[1023px]:hidden">
 
-
-<!-- DESCRIÇÃO -->
-
-<div class="funcionalidade">
-      <div class="butao1">
-      <p class="d-inline-flex gap-1">
-        <a class="btn btn-primary" id="butao1" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+  <!-- DESCRIÇÃO -->
+  <div class="funcionalidade
+              max-[1023px]:flex max-[1023px]:flex-col max-[1023px]:items-center
+              max-[1023px]:gap-4 max-[1023px]:px-4">
+    <div class="butao1 w-full max-w-screen-sm">
+      <p class="d-inline-flex gap-1 w-full">
+        <a class="btn btn-primary w-full text-start" id="butao1" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
           <i class="fa-solid fa-headphones"></i> Qualidade de Som Superior
         </a>
       </p>
       <div class="collapse" id="collapseExample">
-        <div class="card-descricao">
+        <div class="card-descricao max-[1023px]:text-[15px] max-[360px]:text-[14px]">
           No Melodia, cada faixa é reproduzida com clareza e profundidade. 
           A tecnologia de áudio avançada garante uma experiência sonora rica, perfeita para quem valoriza cada detalhe da música.
         </div>
       </div>
     </div>
-    <br>
-    <div class="butao2">
-      <p class="d-inline-flex gap-1">
-        <a class="btn btn-primary" id="butao2" data-bs-toggle="collapse" href="#boato2" role="button" aria-expanded="false" aria-controls="boato2">
+
+    <div class="butao2 w-full max-w-screen-sm">
+      <p class="d-inline-flex gap-1 w-full">
+        <a class="btn btn-primary w-full text-start" id="butao2" data-bs-toggle="collapse" href="#boato2" role="button" aria-expanded="false" aria-controls="boato2">
           <i class="fa-solid fa-music"></i> Playlists Personalizadas
         </a>
       </p>
       <div class="collapse" id="boato2">
-        <div class="card-descricao">
-        Crie playlists que refletem seu estilo e acompanham seu dia. 
-        Misture gêneros, artistas e momentos para montar trilhas únicas, feitas sob medida para você.
+        <div class="card-descricao max-[1023px]:text-[15px] max-[360px]:text-[14px]">
+          Crie playlists que refletem seu estilo e acompanham seu dia. 
+          Misture gêneros, artistas e momentos para montar trilhas únicas, feitas sob medida para você.
         </div>
       </div>
     </div>
-    <br>
-    <div class="butao3">
-      <p class="d-inline-flex gap-1">
-        <a class="btn btn-primary" id="butao3" data-bs-toggle="collapse" href="#botao3" role="button" aria-expanded="false" aria-controls="botao3">
+
+    <div class="butao3 w-full max-w-screen-sm">
+      <p class="d-inline-flex gap-1 w-full">
+        <a class="btn btn-primary w-full text-start" id="butao3" data-bs-toggle="collapse" href="#botao3" role="button" aria-expanded="false" aria-controls="botao3">
           <i class="fa-solid fa-volume-high"></i> Descoberta de Novos Artistas
         </a>
       </p>
       <div class="collapse" id="botao3">
-        <div class="card-descricao">
-        Explore novos sons e talentos que estão ganhando espaço. 
-        O Melodia conecta você a artistas emergentes e músicas que combinam com seu gosto, ampliando seu universo musical.
+        <div class="card-descricao max-[1023px]:text-[15px] max-[360px]:text-[14px]">
+          Explore novos sons e talentos que estão ganhando espaço. 
+          O Melodia conecta você a artistas emergentes e músicas que combinam com seu gosto, ampliando seu universo musical.
         </div>
       </div>
     </div>
-    <br>
-    <div class="butao4">
-      <p class="d-inline-flex gap-1">
-        <a class="btn btn-primary" id="butao4" data-bs-toggle="collapse" href="#botao4" role="button" aria-expanded="false" aria-controls="botao4">
-        <i class="fa-solid fa-mobile-screen-button"></i> Interface Intuitiva
+
+    <div class="butao4 w-full max-w-screen-sm">
+      <p class="d-inline-flex gap-1 w-full">
+        <a class="btn btn-primary w-full text-start" id="butao4" data-bs-toggle="collapse" href="#botao4" role="button" aria-expanded="false" aria-controls="botao4">
+          <i class="fa-solid fa-mobile-screen-button"></i> Interface Intuitiva
         </a>
       </p>
       <div class="collapse" id="botao4">
-        <div class="card-descricao">
-        Pensada para ser simples e agradável, a interface do Melodia facilita sua navegação. 
-        Tudo está ao alcance de poucos toques, tornando sua experiência prática e fluida.
+        <div class="card-descricao max-[1023px]:text-[15px] max-[360px]:text-[14px]">
+          Pensada para ser simples e agradável, a interface do Melodia facilita sua navegação. 
+          Tudo está ao alcance de poucos toques, tornando sua experiência prática e fluida.
         </div>
       </div>
     </div>
-    <br>
-    <div class="butao5">
-      <p class="d-inline-flex gap-1">
-        <a class="btn btn-primary" id="butao5" data-bs-toggle="collapse" href="#botao5" role="button" aria-expanded="false" aria-controls="botao5">
-        <i class="fa-solid fa-desktop"></i> Experiência Multiplataforma
+
+    <div class="butao5 w-full max-w-screen-sm">
+      <p class="d-inline-flex gap-1 w-full">
+        <a class="btn btn-primary w-full text-start" id="butao5" data-bs-toggle="collapse" href="#botao5" role="button" aria-expanded="false" aria-controls="botao5">
+          <i class="fa-solid fa-desktop"></i> Experiência Multiplataforma
         </a>
       </p>
       <div class="collapse" id="botao5">
-        <div class="card-descricao">
-      Leve sua música para onde quiser.
-      O Melodia funciona perfeitamente em diferentes dispositivos, permitindo que você curta seu som no celular, tablet ou computador, sem perder qualidade.
+        <div class="card-descricao max-[1023px]:text-[15px] max-[360px]:text-[14px]">
+          Leve sua música para onde quiser. O Melodia funciona perfeitamente em diferentes dispositivos,
+          permitindo que você curta seu som no celular, tablet ou computador, sem perder qualidade.
         </div>
       </div>
     </div>
-    <br>
-    <div class="butao6">
-      <p class="d-inline-flex gap-1">
-        <a class="btn btn-primary" id="botao6" data-bs-toggle="collapse" href="#botao6-card" role="button" aria-expanded="false" aria-controls="botao6-card">
-        <i class="fa-solid fa-masks-theater"></i> Trilhas para Cada Momento
+
+    <div class="butao6 w-full max-w-screen-sm">
+      <p class="d-inline-flex gap-1 w-full">
+        <a class="btn btn-primary w-full text-start" id="botao6" data-bs-toggle="collapse" href="#botao6-card" role="button" aria-expanded="false" aria-controls="botao6-card">
+          <i class="fa-solid fa-masks-theater"></i> Trilhas para Cada Momento
         </a>
       </p>
       <div class="collapse" id="botao6-card">
-        <div class="card-descricao">
+        <div class="card-descricao max-[1023px]:text-[15px] max-[360px]:text-[14px]">
           Seja para estudar, relaxar, meditar ou se concentrar, o Melodia oferece trilhas sonoras ideais para cada situação. 
           Escolha o ritmo que acompanha seu dia e seu estado de espírito.
         </div>
       </div>
     </div>
-    <br>
-</div>
+  </div>
 
+  <br><br><br><br>
 
+  <!-- FOOTER  -->
+  <footer class="footer
+    max-[767px]:flex max-[767px]:flex-col max-[767px]:items-center
+    max-[767px]:text-center max-[767px]:gap-6
+    max-[767px]:px-4 max-[767px]:py-8">
+    <div class="footer-section max-[767px]:w-full max-[767px]:max-w-[560px]">
+      <h3 class="max-[767px]:text-lg max-[767px]:font-semibold">Sobre</h3>
+      <p>
+        Melodia<br>
+        Sua música, sua forma! 
+      </p>
+    </div>
+    <div class="footer-section max-[767px]:w-full max-[767px]:max-w-[560px]">
+      <h3 class="max-[767px]:text-lg max-[767px]:font-semibold">Endereço</h3>
+      <p>
+        Av. Paulista, 1106 - 12º andar<br>
+        Bela Vista, São Paulo - SP<br>
+        CEP: 01311-000
+      </p>
+    </div>
+    <div class="footer-section max-[767px]:w-full max-[767px]:max-w-[560px]">
+      <h3 class="max-[767px]:text-lg max-[767px]:font-semibold">Contato</h3>
+      <p>
+        Telefone: (11) 5555-5555<br>
+        Email: melodiasongs@gmail.com<br>
+        Instagram: @Melodia_oficial<br>
+        Whatsapp: (11) 5555-5555<br>
+        Facebook: MelodiaSongs
+      </p>
+    </div>
+  </footer>
+  </footer>
 
-
-<br><br><br><br>
-<!-- FOOTER -->
-
-    <footer class="footer">
-                <div class="footer-section">
-                    <h3>Sobre</h3>
-                    <p>
-                        Melodia<br>
-                        Sua música, sua forma! 
-                    </p>
-                </div>
-                <div class="footer-section">
-                    <h3>Endereço</h3>
-                    <p>
-                        Av. Paulista, 1106 - 12º andar<br>
-                        Bela Vista, São Paulo - SP<br>
-                        CEP: 01311-000
-                    </p>
-                </div>
-                <div class="footer-section">
-                    <h3>Contato</h3>
-                    <p>
-                        Telefone: (11) 5555-5555<br>
-                        Email: melodiasongs@gmail.com<br>
-                        Instagram: @Melodia_oficial<br>
-                        Whatsapp: (11) 5555-5555<br>
-                        Facebook: MelodiaSongs
-                    </p>
-                </div>
-            </footer>
-    </footer>
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../js/script.js"></script>
 </body>
 </html>
