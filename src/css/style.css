@@ -18,7 +18,7 @@ body{
     align-items: left;
     font-family: sans-serif;
     border-radius: 3px ;
-    background:linear-gradient(45deg, #7F00FF,rgb(63, 12, 114), #000);
+    background:linear-gradient(45deg, #7F00FF,rgb(63, 12, 114), #000) ;
     gap: 60px;
 }
 
