@@ -1,7 +1,7 @@
 /*corpo da página*/
 
 body{
-    background-color: #121212;
+    background-color: #1a1a1a;
     margin: 0;
     padding: 0;
 }
@@ -10,22 +10,22 @@ body{
 
 /* barra de header/navegação*/
 
-
 .conteiner{
     width: auto;
     height: 100px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: left;
     font-family: sans-serif;
     border-radius: 3px ;
-    background:linear-gradient(45deg, #7F00FF,rgb(63, 12, 114), #000);
-
-
+    background:linear-gradient(45deg, #7F00FF,rgb(63, 12, 114), #000) ;
+    gap: 60px;
 }
 
 nav{
     display: flex;
+    margin: 20px;
+    padding-left: 300px;
 }
 
 nav{
@@ -82,23 +82,26 @@ nav a:hover::after{
     right: -8px;
 }
 
+.textoheader {
+  display: flex;
+  align-items: center; 
+  gap: 20px; 
+}
 
-/*PARAGRAFO*/
+.textoheader img {
+  margin-top: 5px;    
+  width: 120px;
+  height: 120px;
+}
 
-.card-corpo{
-    display:flex;
-    height: 100%;
-    border-radius: 12px;
+.textoheader h4 {
     text-align: center;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
-    padding: 30px;
-   
+    font-size:larger;
+    color: #fff;
 }
 
 /*contatos*/
-.card-contatos{
+#formDepoimento{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -112,7 +115,7 @@ nav a:hover::after{
     background-color: rgb(63, 12, 114);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 10px rgba(0, 0, 0, 0.19);
 }
-.col-md-6, .col-12, .col-md-4, .col-md-2 {
+.col-md-6, .col-12, .col-md-2 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -121,5 +124,328 @@ nav a:hover::after{
     color: #fff;
     width: 100%;
     margin: 5 auto;
+}
+
+#inputCity{
+    width: 600px;
+    height:90px;
+}
+
+/*FOOTER*/
+.footer{
+  padding:10px 0;
+  text-align:center;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  gap:40px;
+  width:100%;
+   background:linear-gradient(45deg, #000,rgb(63, 12, 114), #7F00FF);
+   margin-top: 50px;
+}
+
+.footer-section{
+    color:#fff;
+    display: block;
+}
+
+/*PARAGRAFO*/
+
+.card-pai{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.card-corpo, .card-corpo2{
+    display: inline-block;
+    width: 20%;
+    vertical-align: top;
+    border-radius: 25px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    padding: 30px;
+
+}
+
+.card, .card2{
+    background-color:rgb(63, 12, 114);
+    
+}
+.card-text, .card-text2{
+    color:#fff;
+    height: 200px;
+}
+.card-title, .card-title2{
+    color:#fff;
+    height: 50px;
+}
+.card-body a{
+    background-color: #b163ff;
+    border-color: #d4a8ff;
+    border-radius: 10px;
+}
+
+
+
+/*MUSICA*/
+
+ .musica {
+  text-align: center;
+  margin: 40px auto;
+  width: 100%;
+  max-width: 900px;
+  color: #fff;
+}
+
+.musica h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+.musica-lista {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 10px;
+}
+
+.musica-item {
+  flex: 0 0 auto;
+  width: 300px;
+  scroll-snap-align: start;
+  background: #222;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.musica-item iframe {
+  width: 100%;
+  border-radius: 8px;
+}
+
+
+/*DEPOIMENTOS-PÁGINA INICIAL*/
+
+
+/* Título principal dos depoimentos */
+.depoimentos-index h2 {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Container de cada depoimento */
+.card-depoimento {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    max-width: 350px;
+    flex: 1;
+}
+
+/* Nome do usuário */
+.card-depoimento h5 {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Texto do comentário */
+.card-depoimento p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Lista de depoimentos em grid responsivo */
+#listaDepoimentosIndex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Botão "Ver todos" */
+.depoimentos-index .btn {
+    background-color: rgb(63, 12, 114);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.depoimentos-index .btn:hover {
+    background-color:#7F00FF;
+}
+
+
+
+
+
+
+
+/*PÁGINA SOBRE*/
+
+#quemsomos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 2rem;
+  flex-wrap: wrap;
+  flex-direction: row-reverse;
+}
+
+#quemsomos img{
+    min-width: 90px;
+    max-width: 350px;
+}
+
+.quemsomo h2{
+  color: #ffffff;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.quemsomo p {
+  font-size: 20px;
+  color: #ffffff;
+  max-width: 500px;
+}
+
+.beneficios{
+    height: 300px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.list-group{
+
+    width: 900px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+   --bs-list-group-action-hover-bg:rgb(168, 168, 168);
+    --bs-list-group-border-color: rgb(136, 136, 136);
+}
+ 
+#cabeca{
+    background-color: rgb(63, 12, 114) ;
+}
+
+.list-group-item {
+    background-color: rgb(172, 172, 172);
+}
+
+.list-group-item.active {
+    z-index: 2;
+    color: var(--bs-list-group-active-color);
+    background-color: #7F00FF;
+    border-color: rgb(63, 12, 114);
+}
+
+.funcionalidade{
+    display: flex;
+    margin-top: 70px;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#butao1, #butao2, #butao3, #butao4, #butao5, #botao6{
+    background-color: #7F00FF;
+    border-color:rgb(63, 12, 114) ;
+}
+
+
+.card-descricao{
+    font-size: 15px;
+  color: #ffffff;
+  max-width: 500px;
+}
+
+/* DEPOIMENTOS */
+
+
+
+.card-descricao{
+    font-size: 15px;
+  color: #ffffff;
+  max-width: 500px;
+}
+
+/* DEPOIMENTOS */
+
+
+
+    .cardj, .cardje {
+      background-color: #ffffff;
+      border-radius: 8px;
+      padding: 20px;
+      width: 300px;
+      margin: 10px;
+    }
+
+    .card-contentj {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .card-headerj img {
+       width: 90px;
+       height: 60px;
+       border-radius: 50px;
+       margin: 5px;
+    }
+    
+    .depoimentos, .depoimentos2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin: 10px;
+    }
+
+    .cardje {
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 15px 0;
+  background: #f9f9f9;
+}
+
+.card-footerj {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-excluir {
+  margin-left: 10px;
+}
+
+.depoimentos-titulo{
+    color:#fff;
+    display:flex;
+    text-align:center;
+    justify-content:center;
+    align-items:center;
 }
 

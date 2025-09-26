@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"/>
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+    crossorigin="anonymous"
+  />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/style.css"/>
   <link rel="icon" href="../assets/logo-melodia.png"/>
@@ -12,62 +16,87 @@
 <body>
   <header class="conteiner">
     <nav>
-      <a href="index.html">Home</a>
-      <a href="src/pages/sobre.html">Sobre</a>
-      <a href="src/pages/depoimentos.html">depoimentos</a>
-      <a href="src/pages/contato.html">Contato</a>
+      <a href="/index.html">Home</a>
+      <a href="../pages/sobre.html">Sobre</a>
+      <a href="../pages/depoimentos.html">Depoimentos</a>
+      <a href="../pages/contato.html">Contato</a>
     </nav>
+    <div class="textoheader">
+      <img src="../assets/image_2025-09-23_003617409.png">
+      <h4>Melodia: Sua Música, sua forma!</h4>
+    </div>
   </header>
 
-<div class="card-contatos">
-  <form class="row g-3">
-    <div class="col-md-6">
-      <label for="inputEmail4" class="form-label">Email</label>
-      <input type="email" class="form-control" id="emailInput">
-    </div>
-    <div class="col-md-6">
-      <label for="inputPassword4" class="form-label">Senha</label>
-      <input type="password" class="form-control" id="inputPassword4">
-    </div>
-    <div class="col-12">
-      <label for="inputAddress" class="form-label">Endereço</label>
-      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-    </div>
-  
-    <div class="col-md-6">
-      <label for="inputCity" class="form-label">Comentario</label>
-      <input type="text" class="form-control" id="inputCity">
-      <br>
-    </div>
-    <div class="col-md-4">
-      <select id="inputState" class="form-select">
-        <option selected>Eu aceito os termos e compromissos</option>
-        <option>Eu aceito</option>
-      </select>
-    </div>
-    <div class="col-md-2">
-      <label for="inputZip" class="form-label">Zip</label>
-      <input type="text" class="form-control" id="inputZip">
-      <br>
-    </div>
-    <div class="col-12">
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="gridCheck">
-        <label class="form-check-label" for="gridCheck">
-          Check me out
-        </label>
+  <div class="card-contatos">
+    <form id="formDepoimento" class="row g-3">
+      <div class="col-md-6">
+        <label for="inputEmail4" class="form-label">Email</label>
+        <input type="email" class="form-control" id="inputEmail4" placeholder="usuaria@gmail.com.br" required>
       </div>
-    </div>
-    <div class="col-12">
-      <button type="submit" class="btn btn-primary" id="enviarBtn">Sign in</button>
-    </div>
-  </form>
-</div>
+      <div class="col-md-6">
+        <label for="inputNome" class="form-label">Nome</label>
+        <input type="text" class="form-control" id="inputNome" placeholder="Julia Pompeu" required>
+      </div>
+      <div class="col-md-6">
+        <label for="inputPassword4" class="form-label">Senha</label>
+        <input type="password" class="form-control" id="inputPassword4" placeholder="1234" required>
+      </div>
+      <div class="col-12">
+        <label for="inputAddress" class="form-label">Endereço</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" required>
+      </div>
+      <div class="col-md-6">
+        <label for="inputComentario" class="form-label">Comentário</label>
+        <input type="text" class="form-control" id="inputComentario" required>
+      </div>
+      <div class="col-12">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="gridCheck" required>
+          <label class="form-check-label" for="gridCheck">
+            Aceito os termos de compromisso.
+          </label>
+        </div>
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary">Enviar Depoimento</button>
+      </div>
+    </form>
+  </div>
 
+  <br>
+   <footer class="footer">
+                <div class="footer-section">
+                    <h3>Sobre</h3>
+                    <p>
+                        Melodia<br>
+                        Sua música, sua forma! 
+                        <br>
+                        Seu aplicativo de música preferido em todas as plataformas!
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h3>Endereço</h3>
+                    <p>
+                        Av. Paulista, 1106 - 12º andar<br>
+                        Bela Vista, São Paulo - SP<br>
+                        CEP: 01311-000
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contato</h3>
+                    <p>
+                        Telefone: (11) 5555-5555<br>
+                        Email: melodiasongs@gmail.com<br>
+                        Instagram: @Melodia_oficial<br>
+                        Whatsapp: (11) 5555-5555<br>
+                        Facebook: MelodiaSongs
+                    </p>
+                </div>
+            </footer>
+    </footer>
 
-
-</body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   <script src="../js/script.js"></script>
-
 </body>
 </html>
+
