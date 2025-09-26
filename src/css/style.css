@@ -449,3 +449,6 @@ nav a:hover::after{
     align-items:center;
 }
 
+.collapse{
+    visibility: visible !important;
+}
