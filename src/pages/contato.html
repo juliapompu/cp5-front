@@ -1,102 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
-    crossorigin="anonymous"
-  />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/style.css"/>
-  <link rel="icon" href="../assets/logo-melodia.png"/>
-  <title>Melodia</title>
-</head>
-<body>
-  <header class="conteiner">
-    <nav>
-      <a href="/index.html">Home</a>
-      <a href="../pages/sobre.html">Sobre</a>
-      <a href="../pages/depoimentos.html">Depoimentos</a>
-      <a href="../pages/contato.html">Contato</a>
-    </nav>
-    <div class="textoheader">
-      <img src="../assets/image_2025-09-23_003617409.png">
-      <h4>Melodia: Sua Música, sua forma!</h4>
-    </div>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      crossorigin="anonymous"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <div class="card-contatos">
-    <form id="formDepoimento" class="row g-3">
-      <div class="col-md-6">
-        <label for="inputEmail4" class="form-label">Email</label>
-        <input type="email" class="form-control" id="inputEmail4" placeholder="usuaria@gmail.com.br" required>
-      </div>
-      <div class="col-md-6">
-        <label for="inputNome" class="form-label">Nome</label>
-        <input type="text" class="form-control" id="inputNome" placeholder="Julia Pompeu" required>
-      </div>
-      <div class="col-md-6">
-        <label for="inputPassword4" class="form-label">Senha</label>
-        <input type="password" class="form-control" id="inputPassword4" placeholder="1234" required>
-      </div>
-      <div class="col-12">
-        <label for="inputAddress" class="form-label">Endereço</label>
-        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" required>
-      </div>
-      <div class="col-md-6">
-        <label for="inputComentario" class="form-label">Comentário</label>
-        <input type="text" class="form-control" id="inputComentario" required>
-      </div>
-      <div class="col-12">
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="gridCheck" required>
-          <label class="form-check-label" for="gridCheck">
-            Aceito os termos de compromisso.
-          </label>
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="icon" href="../assets/logo-melodia.png" />
+    <title>Melodia</title>
+  </head>
+  <body class="bg-[#1a1a1a]">
+    
+    <!-- HEADER -->
+    <header class="conteiner relative">
+      <div class="lg:hidden w-full px-4 py-3 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <img
+            src="../assets/image_2025-09-23_003617409.png"
+            alt="Logo Melodia"
+            class="w-9 h-9 object-contain"
+          />
+          <h4
+            class="text-white text-xs leading-snug max-[420px]:text-[11px] max-[360px]:text-[10px]"
+          >
+            Melodia: Sua Música, sua forma!
+          </h4>
         </div>
+        <button
+          id="menuToggle"
+          aria-label="Abrir menu"
+          class="p-2 rounded-lg border border-white/25 active:scale-95 transition"
+        >
+          <svg
+            id="iconOpen"
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 text-white"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+          <svg
+            id="iconClose"
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 text-white hidden"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          </svg>
+        </button>
       </div>
-      <div class="col-12">
-        <button type="submit" class="btn btn-primary">Enviar Depoimento</button>
-      </div>
-    </form>
-  </div>
 
-  <br>
-   <footer class="footer">
-                <div class="footer-section">
-                    <h3>Sobre</h3>
-                    <p>
-                        Melodia<br>
-                        Sua música, sua forma! 
-                        <br>
-                        Seu aplicativo de música preferido em todas as plataformas!
-                    </p>
-                </div>
-                <div class="footer-section">
-                    <h3>Endereço</h3>
-                    <p>
-                        Av. Paulista, 1106 - 12º andar<br>
-                        Bela Vista, São Paulo - SP<br>
-                        CEP: 01311-000
-                    </p>
-                </div>
-                <div class="footer-section">
-                    <h3>Contato</h3>
-                    <p>
-                        Telefone: (11) 5555-5555<br>
-                        Email: melodiasongs@gmail.com<br>
-                        Instagram: @Melodia_oficial<br>
-                        Whatsapp: (11) 5555-5555<br>
-                        Facebook: MelodiaSongs
-                    </p>
-                </div>
-            </footer>
+      <!-- MENU DESKTOP -->
+      <nav class="hidden lg:flex">
+        <a href="/index.html">Home</a>
+        <a href="../pages/sobre.html">Sobre</a>
+        <a href="../pages/depoimentos.html">Depoimentos</a>
+        <a href="../pages/contato.html">Contato</a>
+      </nav>
+      <div class="textoheader hidden lg:flex">
+        <img src="../assets/image_2025-09-23_003617409.png" />
+        <h4>Melodia: Sua Música, sua forma!</h4>
+      </div>
+
+      <!-- MENU MOBILE -->
+      <div
+        id="menuBackdrop"
+        class="lg:hidden fixed inset-0 bg-black/50 opacity-0 pointer-events-none transition-opacity duration-300 z-[10000]"
+      ></div>
+
+      <aside
+        id="mobileMenu"
+        class="lg:hidden fixed inset-x-0 top-0 z-[10001] opacity-0 pointer-events-none transition-opacity duration-300"
+      >
+        <div class="pt-[72px] max-[420px]:pt-[68px] max-[360px]:pt-[64px]">
+          <div
+            id="mobilePanel"
+            class="mx-3 rounded-xl bg-black/85 backdrop-blur-md border border-white/10 overflow-hidden transform -translate-y-6 transition-transform duration-300"
+          >
+            <nav
+              class="flex flex-col items-stretch text-center py-2 px-2 max-h-[70vh] overflow-y-auto"
+            >
+              <a
+                href="/index.html"
+                class="text-white max-[360px]:text-[12px] max-[420px]:text-xs text-sm md:text-base tracking-wide py-3 max-[420px]:py-2.5 rounded-lg hover:bg-white/10"
+                >HOME</a
+              >
+              <a
+                href="../pages/sobre.html"
+                class="text-white max-[360px]:text-[12px] max-[420px]:text-xs text-sm md:text-base tracking-wide py-3 max-[420px]:py-2.5 rounded-lg hover:bg-white/10"
+                >SOBRE</a
+              >
+              <a
+                href="../pages/depoimentos.html"
+                class="text-white max-[360px]:text-[12px] max-[420px]:text-xs text-sm md:text-base tracking-wide py-3 max-[420px]:py-2.5 rounded-lg hover:bg-white/10"
+                >DEPOIMENTOS</a
+              >
+              <a
+                href="../pages/contato.html"
+                class="text-white max-[360px]:text-[12px] max-[420px]:text-xs text-sm md:text-base tracking-wide py-3 max-[420px]:py-2.5 rounded-lg hover:bg-white/10"
+                >CONTATO</a
+              >
+            </nav>
+          </div>
+        </div>
+      </aside>
+    </header>
+
+    <!-- Conteúdo  -->
+    <div class="card-contatos max-[1023px]:px-4 max-[1023px]:mt-4">
+      <form
+        id="formDepoimento"
+        class="row g-3 max-[1023px]:!w-[95%] max-[1023px]:mx-auto max-[1023px]:!p-4 max-[1023px]:gap-3 max-[420px]:!w-[92%] max-[420px]:!p-3"
+      >
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label text-white">Email</label>
+          <input
+            type="email"
+            class="form-control max-[1023px]:!w-full"
+            id="inputEmail4"
+            placeholder="usuaria@gmail.com.br"
+            required
+          />
+        </div>
+        <div class="col-md-6">
+          <label for="inputNome" class="form-label text-white">Nome</label>
+          <input
+            type="text"
+            class="form-control max-[1023px]:!w-full"
+            id="inputNome"
+            placeholder="Julia Pompeu"
+            required
+          />
+        </div>
+        <div class="col-md-6">
+          <label for="inputPassword4" class="form-label text-white"
+            >Senha</label
+          >
+          <input
+            type="password"
+            class="form-control max-[1023px]:!w-full"
+            id="inputPassword4"
+            placeholder="1234"
+            required
+          />
+        </div>
+        <div class="col-12">
+          <label for="inputAddress" class="form-label text-white"
+            >Endereço</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="inputAddress"
+            placeholder="1234 Main St"
+            required
+          />
+        </div>
+        <div class="col-md-6">
+          <label for="inputComentario" class="form-label text-white"
+            >Comentário</label
+          >
+          <input
+            type="text"
+            class="form-control max-[1023px]:!w-full"
+            id="inputComentario"
+            required
+          />
+        </div>
+        <div class="col-12">
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              id="gridCheck"
+              required
+            />
+            <label class="form-check-label text-white" for="gridCheck">
+              Aceito os termos de compromisso.
+            </label>
+          </div>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-primary">
+            Enviar Depoimento
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <br />
+
+    <!-- FOOTER -->
+    <footer
+      class="footer max-[767px]:flex max-[767px]:flex-col max-[767px]:items-center max-[767px]:text-center max-[767px]:gap-6 max-[767px]:px-4 max-[767px]:py-8"
+    >
+      <div class="footer-section max-[767px]:w-full max-[767px]:max-w-[560px]">
+        <h3 class="max-[767px]:text-lg max-[767px]:font-semibold">Sobre</h3>
+        <p>
+          Melodia<br />
+          Sua música, sua forma!
+          <br />
+          Seu aplicativo de música preferido em todas as plataformas!
+        </p>
+      </div>
+
+      <div class="footer-section max-[767px]:w-full max-[767px]:max-w-[560px]">
+        <h3 class="max-[767px]:text-lg max-[767px]:font-semibold">Endereço</h3>
+        <p>
+          Av. Paulista, 1106 - 12º andar<br />
+          Bela Vista, São Paulo - SP<br />
+          CEP: 01311-000
+        </p>
+      </div>
+
+      <div class="footer-section max-[767px]:w-full max-[767px]:max-w-[560px]">
+        <h3 class="max-[767px]:text-lg max-[767px]:font-semibold">Contato</h3>
+        <p>
+          Telefone: (11) 5555-5555<br />
+          Email: melodiasongs@gmail.com<br />
+          Instagram: @Melodia_oficial<br />
+          Whatsapp: (11) 5555-5555<br />
+          Facebook: MelodiaSongs
+        </p>
+      </div>
     </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../js/script.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+  </body>
 </html>
-

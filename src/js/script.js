@@ -232,3 +232,67 @@ renderDepoimentosIndex();
   
 })();
 
+(function () {
+      const toggle = document.getElementById('menuToggle');
+      const backdrop = document.getElementById('menuBackdrop');
+      const menu = document.getElementById('mobileMenu');
+      const panel = document.getElementById('mobilePanel');
+      const iconOpen = document.getElementById('iconOpen');
+      const iconClose = document.getElementById('iconClose');
+
+      const links = menu.querySelectorAll('a[href]');
+
+      function openMenu() {
+        // mostra overlay
+        menu.classList.remove('opacity-0','pointer-events-none');
+        backdrop.classList.remove('opacity-0','pointer-events-none');
+        // animações
+        requestAnimationFrame(() => {
+          menu.classList.add('opacity-100');
+          backdrop.classList.add('opacity-100');
+          panel.classList.remove('-translate-y-6');
+          panel.classList.add('translate-y-0');
+        });
+        iconOpen.classList.add('hidden');
+        iconClose.classList.remove('hidden');
+      }
+
+      function closeMenu() {
+        menu.classList.remove('opacity-100');
+        backdrop.classList.remove('opacity-100');
+        panel.classList.add('-translate-y-6');
+        panel.classList.remove('translate-y-0');
+        setTimeout(() => {
+          menu.classList.add('opacity-0','pointer-events-none');
+          backdrop.classList.add('opacity-0','pointer-events-none');
+        }, 250);
+        iconOpen.classList.remove('hidden');
+        iconClose.classList.add('hidden');
+      }
+
+      let isOpen = false;
+
+      toggle?.addEventListener('click', () => {
+        isOpen ? closeMenu() : openMenu();
+        isOpen = !isOpen;
+      });
+
+      // fecha ao clicar no backdrop
+      backdrop?.addEventListener('click', () => {
+        if (isOpen) { closeMenu(); isOpen = false; }
+      });
+
+      // fecha ao clicar em qualquer link (e deixa o link funcionar normalmente)
+      links.forEach(a => {
+        a.addEventListener('click', () => {
+          if (isOpen) { closeMenu(); isOpen = false; }
+        });
+      });
+
+      // se redimensionar para desktop, garante fechado
+      window.addEventListener('resize', () => {
+        if (window.innerWidth >= 1024 && isOpen) {
+          closeMenu(); isOpen = false;
+        }
+      });
+    })();
