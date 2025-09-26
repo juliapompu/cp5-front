@@ -1,40 +1,40 @@
 /*EMAILS*/
-const form = document.querySelector("form");
-const emailInput = document.querySelector("#emailInput");
+const formEmail = document.getElementById("formDepoimento");
+const emailInput = document.getElementById("inputEmail4");
 
-if (form && emailInput) {
-  // Quando o formulário for enviado
-  form.addEventListener("submit", (event) => {
-    event.preventDefault(); // evita recarregar a página
+if (formEmail && emailInput) {
+    // Quando o formulário for enviado
+    formEmail.addEventListener("submit", (event) => {
+        event.preventDefault(); // evita recarregar a página
 
-    const email = emailInput.value.trim();
+        const email = emailInput.value.trim();
 
-    if (email === "") {
-      alert("Por favor, insira um email válido.");
-      return;
-    }
+        if (email === "") {
+            alert("Por favor, insira um email válido.");
+            return;
+        }
 
-  // Busca a lista atual de emails no localStorage (ou cria lista vazia)
-  let listaEmails = JSON.parse(localStorage.getItem("emails")) || [];
+        // Busca a lista atual de emails no localStorage (ou cria lista vazia)
+        let listaEmails = JSON.parse(localStorage.getItem("emails")) || [];
 
-  // Verifica se já existe
-  if (listaEmails.includes(email)) {
-    alert("Esse email já foi cadastrado!");
-    return;
-  }
+        // Verifica se já existe
+        if (listaEmails.includes(email)) {
+            alert("Esse email já foi cadastrado!");
+            return;
+        }
 
-  // Adiciona o novo email
-  listaEmails.push(email);
+        // Adiciona o novo email
+        listaEmails.push(email);
 
-  // Salva de volta no localStorage
-  localStorage.setItem("emails", JSON.stringify(listaEmails));
-  
-  console.log("Emails cadastrados:", listaEmails);
+        // Salva de volta no localStorage
+        localStorage.setItem("emails", JSON.stringify(listaEmails));
+        
+        console.log("Emails cadastrados:", listaEmails);
 
-  // Limpa o campo
-  emailInput.value = "";
-  alert("Email cadastrado com sucesso!");
-  });
+        // Limpa o campo
+        emailInput.value = "";
+        alert("Email cadastrado com sucesso!");
+    });
 }
 
 /* DEPOIMENTOS*/
@@ -43,6 +43,38 @@ if (form && emailInput) {
 
   document.addEventListener("DOMContentLoaded", () => {
     console.log("script.js carregado —", location.pathname);
+    // ✅ sempre garante que os 3 fixos estão no localStorage
+    const fixos = [
+    {
+        id: "fixo-1",
+        nome: "Mariana",
+        comentario: "O aplicativo é incrível, tem todas as músicas que eu gosto e a interface é super fácil de usar!",
+        timestamp: new Date().toLocaleString("pt-BR")
+    },
+    {
+        id: "fixo-2",
+        nome: "Carlos",
+        comentario: "A qualidade do som é excelente e adorei as playlists prontas, sempre descubro músicas novas.",
+        timestamp: new Date().toLocaleString("pt-BR")
+    },
+    {
+        id: "fixo-3",
+        nome: "Fernanda",
+        comentario: "Uso todos os dias para treinar, nunca trava e funciona até offline. Recomendo demais!",
+        timestamp: new Date().toLocaleString("pt-BR")
+    }
+    ];
+
+    let atuais = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
+
+    // adiciona apenas os que ainda não existem (com base no id)
+    fixos.forEach(f => {
+    if (!atuais.find(d => d.id === f.id)) {
+        atuais.push(f);
+    }
+    });
+
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(atuais));
 
     const read = () => JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
     const save = (arr) => localStorage.setItem(STORAGE_KEY, JSON.stringify(arr));
